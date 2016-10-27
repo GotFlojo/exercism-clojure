@@ -1,9 +1,9 @@
 (ns bob)
 
 (defn yelling? [s]
-    (every? #(or (not (Character/isLetter %))
-                 (Character/isUpperCase %))
-            s))
+    (let [letters (filter #(Character/isLetter %) s)]
+      (and (seq letters)
+           (every? #(Character/isUpperCase %) letters))))
 
 (defn asking? [s]
   (= \? (last s)))
