@@ -6,7 +6,7 @@
             s))
 
 (defn asking? [s]
-  (= "?" (last s)))
+  (= \? (last s)))
 
 (defn nothing? [s]
   (clojure.string/blank? s))
@@ -16,5 +16,5 @@
   (cond
     (nothing? s) "Fine. Be that way!"
     (yelling? s) "Whoa, chill out!"
-    (asking? s) "Sure"
+    (asking? s) "Sure."
      :else "Whatever."))
