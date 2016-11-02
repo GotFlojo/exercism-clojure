@@ -5,4 +5,4 @@
     (clojure.string/lower-case s) #"[^\w]+"))
 
 (defn word-count [s]
-  (frequencies (words s))) ;; <- arglist goes here(clojure.string/split s)
+  (into {} (frequencies (words s)))) ;; <- arglist goes here(clojure.string/split s)
