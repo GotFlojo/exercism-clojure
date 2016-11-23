@@ -1,7 +1,7 @@
 (ns anagram)
 
 (defn char-frequencies [string]
-  (into {} (frequencies (seq string))))
+  (frequencies (seq string)))
 
 (defn is-anagram? [word candidate]
   (let [w (clojure.string/lower-case word)
